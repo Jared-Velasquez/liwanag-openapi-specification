@@ -1,0 +1,11 @@
+type: object
+properties:
+  word_id:
+    type: string
+    description: "Vocab ID. Acts as the sort key."
+  sentence_id:
+    type: string
+    description: "Sentence ID. Acts as the partition key."
+  created_time:
+    type: string
+    format: date-time

@@ -2,8 +2,9 @@ type: object
 properties:
   user_id:
     type: string
+    description: "User ID. Acts as the partition key."
   achievement_id:
-    $ref: './index.yaml#Achievement'
+    $ref: "index.yaml#Achievement"
   created_time:
     type: string
     format: date-time

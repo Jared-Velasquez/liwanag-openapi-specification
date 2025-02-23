@@ -6,6 +6,7 @@ required:
 properties:
   user_id:
     type: string
+    description: "User ID. Acts as the sort key."
   first_name:
     type: string
   last_name:
@@ -14,6 +15,7 @@ properties:
     type: string
   avatar:
     type: string
+    description: "URL of profile picture."
   created_time:
     type: string
     format: date-time

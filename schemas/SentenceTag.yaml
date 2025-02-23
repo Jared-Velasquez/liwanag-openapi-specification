@@ -1,0 +1,9 @@
+type: array
+description: "Tags to categorize a sentence with."
+items:
+  type: string
+  enum:
+    - greetings
+    - basic_conversation
+    - travel
+    - food

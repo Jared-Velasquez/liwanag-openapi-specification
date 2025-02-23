@@ -1,0 +1,17 @@
+type: object
+properties:
+  word_id:
+    type: string
+    description: "Vocab ID. Acts as the partition key."
+  word:
+    type: string
+  part_of_speech:
+    type: string
+    description: "The grammatical category of a word."
+    enum: ["noun", "verb", "adjective", "adverb", "pronoun", "preposition", "conjunction", "interjection"]
+  created_time:
+    type: string
+    format: date-time
+  updated_time:
+    type: string
+    format: date-time

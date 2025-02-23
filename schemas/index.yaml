@@ -1,14 +1,18 @@
-User:
+User: # DynamoDB table
   $ref: 'User.yaml'
-UserAchievement:
+UserAchievement: # DynamoDB table
   $ref: 'UserAchievement.yaml'
-UserProgress:
+UserProgress: # DynamoDB table
   $ref: 'UserProgress.yaml'
-Episode:
+Episode: # DynamoDB table
   $ref: 'Episode.yaml'
-Sentence:
+Sentence: # DynamoDB table
   $ref: 'Sentence.yaml'
-Vocab:
+Vocab: # DynamoDB table
   $ref: 'Vocab.yaml'
+SentenceVocabrelation: # DynamoDB table
+  $ref: 'SentenceVocabRelation.yaml'
 Achievement:
   $ref: 'Achievement.yaml'
+SentenceTag:
+  $ref: 'SentenceTag.yaml'

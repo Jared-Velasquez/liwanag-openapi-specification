@@ -1,0 +1,8 @@
+type: string
+description: "Predefined identifier for achievements."
+enum:
+  - streak_7_days
+  - streak_1_month
+  - completed_first_lesson
+  - mastered_language_basics
+  - daily_goal_achieved_10_times

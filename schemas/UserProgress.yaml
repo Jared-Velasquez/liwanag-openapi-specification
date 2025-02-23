@@ -1,0 +1,28 @@
+type: object
+properties:
+  user_id:
+    type: string
+    format: "User ID. Acts as the partition key."
+  episode_id:
+    type: string
+    format: "Episode ID. Acts as the sort key."
+  progress:
+    type: integer
+    format: int32
+    description: "Step count within the episode."
+    example: 45
+  created_time:
+    type: string
+    format: date-time
+  updated_time:
+    type: string
+    format: date-time
+  metadata:
+    type: object
+    description: "Additional information about the user's lesson progress."
+    properties:
+      last_attempted_question:
+        type: integer
+        format: int32
+        description: "The last question the user attempted"
+        example: 12

@@ -1,2 +1,14 @@
 User:
   $ref: 'User.yaml'
+UserAchievement:
+  $ref: 'UserAchievement.yaml'
+UserProgress:
+  $ref: 'UserProgress.yaml'
+Episode:
+  $ref: 'Episode.yaml'
+Sentence:
+  $ref: 'Sentence.yaml'
+Vocab:
+  $ref: 'Vocab.yaml'
+Achievement:
+  $ref: 'Achievement.yaml'

@@ -1,0 +1,10 @@
+type: object
+properties:
+  user_id:
+    type: string
+  achievement_id:
+    $ref: './index.yaml#Achievement'
+  created_time:
+    type: string
+    format: date-time
+    description: "Acts as timestamp when the achievement was earned"

@@ -4,6 +4,8 @@ required:
   - last_name
   - email
 properties:
+  user_id:
+    type: string
   first_name:
     type: string
   last_name:
@@ -13,6 +15,8 @@ properties:
   avatar:
     type: string
   created_time:
-    type: integer
+    type: string
+    format: date-time
   updated_time:
-    type: integer
+    type: string
+    format: date-time

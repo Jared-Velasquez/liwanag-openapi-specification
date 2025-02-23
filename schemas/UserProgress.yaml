@@ -1,4 +1,8 @@
 type: object
+required:
+  - user_id
+  - episode_id
+  - progress
 properties:
   user_id:
     type: string

@@ -1,4 +1,7 @@
 type: object
+required:
+  - user_id
+  - achievement_id
 properties:
   user_id:
     type: string

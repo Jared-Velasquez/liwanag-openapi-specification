@@ -1,4 +1,7 @@
 type: object
+required:
+  - word
+  - part_of_speech
 properties:
   word_id:
     type: string

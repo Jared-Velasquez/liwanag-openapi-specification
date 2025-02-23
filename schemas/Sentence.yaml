@@ -1,4 +1,8 @@
 type: object
+required:
+  - text
+  - translation
+  - difficulty_level
 properties:
   sentence_id:
     type: string

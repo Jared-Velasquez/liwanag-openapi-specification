@@ -1,0 +1,13 @@
+openapi: 3.0.0
+info:
+  version: 0.1.0
+  title: Liwanag API
+  description: API for Liwanag, a Tagalog language learning application.
+
+paths:
+  /users:
+    $ref: 'paths/Users.yaml'
+
+components:
+  schemas:
+    $ref: 'schemas/index.yaml'

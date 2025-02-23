@@ -1,0 +1,33 @@
+get:
+  summary: Read all users of Liwanag.
+  responses:
+    '200':
+      description: List corresponding to all Liwanag users.
+      content:
+        application/json:
+          schema:
+            type: list
+            $ref: '../schemas/index.yaml#/User'
+    500:
+      description: Unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/index.yaml#/Error'
+post:
+  summary: Register a User.
+  requestBody:
+    description: Required fields to create an User.
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/index.yaml#/User'
+  responses:
+    '201':
+      description: Post has been created. No response body provided.
+    500:
+      description: Unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'

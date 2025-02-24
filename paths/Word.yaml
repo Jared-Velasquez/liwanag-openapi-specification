@@ -1,0 +1,28 @@
+get:
+  summary: "Get a vocabulary word corresponding to word_id."
+  operationId: "getVocabularyById"
+  parameters:
+    - name: "word_id"
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: "Return vocabulary word fields as defined by schema."
+      content:
+        application/json:
+          schema:
+            $ref: "schemas/index.yaml#Word"
+delete:
+  summary: "Delete the vocabulary word corresponding to word_id."
+  operationId: "deleteVocabulary"
+  parameters:
+    - name: "word_id"
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    "204":
+      description: "Vocabulary word with word_id {word_id} was deleted successfully."

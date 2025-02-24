@@ -1,0 +1,16 @@
+get:
+  summary: "Get a sentence corresponding to sentence_id."
+  operationid: "getSentenceById"
+  parameters:
+    - name: "sentence_id"
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: "Return sentence fields as defined by schema"
+      content:
+        application/json:
+          schema:
+            $ref: "schemas/index.yaml#Sentence"

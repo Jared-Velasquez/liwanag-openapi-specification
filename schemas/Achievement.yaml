@@ -1,5 +1,5 @@
 type: string
-description: "Predefined identifier for achievements. Acts as the sort key."
+description: "Predefined identifier for achievements."
 enum:
   - streak_7_days
   - streak_1_month

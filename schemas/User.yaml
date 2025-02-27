@@ -16,6 +16,18 @@ properties:
   avatar:
     type: string
     description: "URL of profile picture."
+  achievements:
+    type: array
+    description: "Achievements that the user has earned."
+    items:
+      type: object
+      properties:
+        achievement:
+          $ref: "#/components/schemas/Achievement"
+        created_time:
+          type: string
+          format: date-time
+          description: "Timestamp when the achievement was earned"
   created_time:
     type: string
     format: date-time

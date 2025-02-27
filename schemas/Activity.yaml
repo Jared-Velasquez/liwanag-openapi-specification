@@ -1,0 +1,26 @@
+type: object
+required:
+  - type
+  - description
+  - lesson_questions
+properties:
+  activity_id:
+    type: string
+    description: "Activity ID. Acts as the partition key."
+  type:
+    $ref: "#/components/schemas/ActivityType"
+  description:
+    type: string
+    description: "Description of the activity."
+  lesson_questions:
+    type: array
+    description: "Lesson questions. Only applicable if Activity is a Lesson. Each array item contains the question_id, not the Question itself."
+    items:
+      $ref: "#/components/schemas/Question"
+    nullable: true
+  created_time:
+    type: string
+    format: date-time
+  updated_time:
+    type: string
+    format: date-time

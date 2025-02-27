@@ -8,12 +8,6 @@ get:
           schema:
             type: list
             $ref: '../schemas/index.yaml#/User'
-    500:
-      description: Unexpected error
-      content:
-        application/json:
-          schema:
-            $ref: '../schemas/index.yaml#/Error'
 post:
   summary: Register a User.
   requestBody:
@@ -25,9 +19,3 @@ post:
   responses:
     '201':
       description: Post has been created. No response body provided.
-    500:
-      description: Unexpected error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'

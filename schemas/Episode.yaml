@@ -1,0 +1,34 @@
+type: object
+required:
+  - title
+  - description
+  - target_vocab
+  - activities
+properties:
+  episode_id:
+    type: string
+    description: "Episode ID. Acts as the partition key."
+  title:
+    type: string
+    description: "Episode title."
+    example: "Greetings and Introducing Yourself."
+  description:
+    type: string
+    description: "Episode description."
+    example: "Pierre finds his seat on the plane and meets Tita Mariel and Jake."
+  target_vocab:
+    type: array
+    description: "Key vocabulary/words covered in this episode. Each array item contains the word_id, not the Word itself."
+    items:
+      $ref: "#/components/schemas/Word"
+  activities:
+    type: array
+    description: "List of activities in this episode. Each array item contains the activity_id, not the Activity itself."
+    items:
+      $ref: "#/components/schemas/Activity"
+  created_time:
+    type: string
+    format: date-time
+  updated_time:
+    type: string
+    format: date-time

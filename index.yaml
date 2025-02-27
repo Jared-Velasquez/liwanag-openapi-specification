@@ -11,10 +11,6 @@ paths:
     $ref: 'paths/Words.yaml'
   /words/{word_id}:
     $ref: 'paths/Word.yaml'
-  /sentences:
-    $ref: 'paths/Sentences.yaml'
-  /sentences/{sentence_id}:
-    $ref: 'paths/Sentence.yaml'
 
 components:
   schemas:

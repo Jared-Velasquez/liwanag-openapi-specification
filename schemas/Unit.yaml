@@ -1,0 +1,28 @@
+type: object
+required:
+  - title
+  - description
+  - episodes
+properties:
+  unit_id:
+    type: string
+    description: "Unit ID. Acts as the partition key."
+  title:
+    type: string
+    description: "Unit title."
+    example: "A Long Flight"
+  description:
+    type: string
+    description: "Overview of what this unit covers."
+    example: "Pierre lands in the Philippines and starts to become acquianted with his culture."
+  episodes:
+    type: array
+    description: "List of episodes in this unit. Each array item contains the episode_id, not the Episode itself."
+    items:
+      $ref: "#/components/schemas/Episode"
+  created_time:
+    type: string
+    format: date-time
+  updated_time:
+    type: string
+    format: date-time

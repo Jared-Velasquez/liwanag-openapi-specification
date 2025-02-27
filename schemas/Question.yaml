@@ -1,0 +1,38 @@
+type: object
+required:
+  - question_type
+  - prompt
+properties:
+  question_id:
+    type: string
+    description: "Question ID. Acts as the partition key."
+  question_type:
+    type: string
+    description: "Type of language exercise."
+    enum: ["multiple_choice", "fill_in_the_blank", "matching", "listening", "speaking"]
+  prompt:
+    type: string
+    description: "Question prompt."
+    example: "What is the correct translation of 'hello / how are you'?"
+  mcq_options: # MULTIPLE-CHOICE ONLY
+    type: array
+    description: "Possible answer choices for multiple-choice questions only."
+    items:
+      type: string
+    example: ["Kumusta", "Ingat", "Paalam", "Magandang umaga"]
+    nullable: true
+  mcq_correct_answer: # MULTIPLE-CHOICE ONLY
+    type: string
+    description: "The correct answer for multiple-choice questions only."
+    example: "Kumusta"
+    nullable: true
+  prompt_audio_url:
+    type: string
+    description: "URL to an audio clip of the question prompt."
+    nullable: true
+  created_time:
+    type: string
+    format: date-time
+  updated_time:
+    type: string
+    format: date-time

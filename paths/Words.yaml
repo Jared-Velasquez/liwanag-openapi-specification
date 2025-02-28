@@ -9,7 +9,7 @@ get:
           schema:
             type: array
             items:
-              $ref: "schemas/index.yaml#Word"
+              $ref: "#/components/schemas/Word"
 post:
   summary: "Add a new vocabulary word."
   operationId: "addVocabulary"
@@ -18,7 +18,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: "schemas/index.yaml#Word"
+          $ref: "#/components/schemas/Word"
   responses:
     "201":
       description: "Vocabulary word added successfully."

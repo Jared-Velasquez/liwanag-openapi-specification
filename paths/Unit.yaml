@@ -1,16 +1,16 @@
 get:
-  summary: "Get a specific episode"
-  operationId: "getEpisode"
+  summary: "Get a specific unit"
+  operationId: "getUnit"
   parameters:
-    - name: "episodeID"
+    - name: "unitID"
       in: path
       required: true
       schema:
         type: string
   responses:
     "200":
-      description: "Episode details"
+      description: "Unit details"
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Episode"
+            $ref: "#/components/schemas/Unit"

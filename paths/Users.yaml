@@ -7,7 +7,7 @@ get:
         application/json:
           schema:
             type: list
-            $ref: '../schemas/index.yaml#/User'
+            $ref: '#/components/schemas/User'
 post:
   summary: Register a User.
   requestBody:
@@ -15,7 +15,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: '../schemas/index.yaml#/User'
+          $ref: '#/components/schemas/User'
   responses:
     '201':
       description: Post has been created. No response body provided.

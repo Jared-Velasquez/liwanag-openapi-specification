@@ -7,10 +7,28 @@ info:
 paths:
   /users:
     $ref: 'paths/Users.yaml'
+  /users/{user_id}:
+    $ref: 'paths/User.yaml'
   /words:
     $ref: 'paths/Words.yaml'
   /words/{word_id}:
     $ref: 'paths/Word.yaml'
+  /units:
+    $ref: 'paths/Units.yaml'
+  /units/{unit_id}:
+    $ref: 'paths/Unit.yaml'
+  /episodes:
+    $ref: 'paths/Episode.yaml'
+  /episodes/{episode_id}:
+    $ref: 'paths/Episodes.yaml'
+  /activities:
+    $ref: 'paths/Activities.yaml'
+  /activities/{activity_id}:
+    $ref: 'paths/Activity.yaml'
+  /questions:
+    $ref: 'paths/Questions.yaml'
+  /questions/{question_id}:
+    $ref: 'paths/Question.yaml'
 
 components:
   schemas:

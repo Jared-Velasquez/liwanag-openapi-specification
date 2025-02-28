@@ -3,13 +3,13 @@ User: # DynamoDB table
 UserProgress: # DynamoDB table
   $ref: 'UserProgress.yaml'
 
-Unit:
+Unit: # DynamoDB table
   $ref: 'Unit.yaml'
 Episode: # DynamoDB table
   $ref: 'Episode.yaml'
-Activity:
+Activity: # DynamoDB table
   $ref: 'Activity.yaml'
-Question:
+Question: # DynamoDB table
   $ref: 'Question.yaml'
 
 

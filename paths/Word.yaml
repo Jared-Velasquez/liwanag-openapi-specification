@@ -13,7 +13,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "schemas/index.yaml#Word"
+            $ref: "#/components/schemas/Word"
 delete:
   summary: "Delete the vocabulary word corresponding to word_id."
   operationId: "deleteVocabulary"

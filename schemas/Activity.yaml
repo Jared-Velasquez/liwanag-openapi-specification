@@ -5,7 +5,7 @@ required:
   - lesson_questions
 properties:
   activity_id:
-    type: string
+    type: integer
     description: "Activity ID. Acts as the partition key."
   type:
     $ref: "#/components/schemas/ActivityType"

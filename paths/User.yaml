@@ -1,0 +1,71 @@
+get:
+  parameters:
+  - name: user_id
+    description: The unique identifier of the User.
+    in: path
+    required: true
+    schema:
+      $ref: '#/components/schemas/User'
+  summary: Read a User.
+  operationId: getUserById
+  responses:
+    '200':
+      description: The user corresponding to the provided `user_id`
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/User'
+    404:
+      description: No user found for the provided `user_id`.
+patch:
+  parameters:
+  - name: user_id
+    description: The unique identifier of the user.
+    in: path
+    required: true
+    schema:
+      $ref: '../schemas/index.yaml#/User'
+  summary: Update a user corresponding to `userId` based on the fields provided.
+  operationId: patchUserById
+  requestBody:
+    description: User fields to update.
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/index.yaml#/User'
+  responses:
+    '200':
+      description: User has been updated with the provided fields.
+    401:
+      description: User is not authenticated via OAuth2 in the web app.
+    403:
+      description: User is not authorized via OAuth2 in the web app. User must be a Board Member.
+    500:
+      description: Unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/index.yaml#/Error'
+delete:
+  parameters:
+  - name: userId
+    description: The unique identifier of the user.
+    in: path
+    required: true
+    schema:
+      $ref: '../schemas/index.yaml#/UserId'
+  summary: Delete a user corresponding to `userId`.
+  operationId: deleteUserById
+  responses:
+    '200':
+      description: User has been deleted.
+    401:
+      description: User is not authenticated via OAuth2 in the web app.
+    403:
+      description: User is not authorized via OAuth2 in the web app. User must be a Board Member.
+    500:
+      description: Unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/index.yaml#/Error'

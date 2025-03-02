@@ -4,7 +4,7 @@ required:
   - prompt
 properties:
   question_id:
-    type: string
+    type: integer
     description: "Question ID. Acts as the partition key."
   question_type:
     type: string

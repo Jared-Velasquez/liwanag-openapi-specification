@@ -17,3 +17,5 @@ Word: # DynamoDB table
   $ref: 'Word.yaml'
 Achievement:
   $ref: 'Achievement.yaml'
+Error:
+  $ref: 'Error.yaml'

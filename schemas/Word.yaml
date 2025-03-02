@@ -4,7 +4,7 @@ required:
   - part_of_speech
 properties:
   word_id:
-    type: string
+    type: integer
     description: "Vocab ID. Acts as the partition key."
   word:
     type: string

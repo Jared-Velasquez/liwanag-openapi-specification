@@ -5,7 +5,7 @@ required:
   - episodes
 properties:
   unit_id:
-    type: string
+    type: integer
     description: "Unit ID. Acts as the partition key."
   title:
     type: string

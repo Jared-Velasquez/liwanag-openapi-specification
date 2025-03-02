@@ -1,5 +1,6 @@
 get:
   summary: Read all users of Liwanag.
+  operationId: getAllUsers
   responses:
     '200':
       description: List corresponding to all Liwanag users.
@@ -8,8 +9,13 @@ get:
           schema:
             type: list
             $ref: '#/components/schemas/User'
+    401:
+      description: "User is not authenticated."
+    403:
+      description: "User is not authorized. User must be an Admin."
 post:
   summary: Register a User.
+  operationId: postUser
   requestBody:
     description: Required fields to create an User.
     content:

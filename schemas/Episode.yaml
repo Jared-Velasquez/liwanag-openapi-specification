@@ -6,7 +6,7 @@ required:
   - activities
 properties:
   episode_id:
-    type: string
+    type: integer
     description: "Episode ID. Acts as the partition key."
   title:
     type: string

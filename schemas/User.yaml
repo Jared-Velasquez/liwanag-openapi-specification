@@ -5,8 +5,8 @@ required:
   - email
 properties:
   user_id:
-    type: string
-    description: "User ID. Acts as the sort key."
+    type: integer
+    description: "User ID. Acts as the partition key."
   first_name:
     type: string
   last_name:

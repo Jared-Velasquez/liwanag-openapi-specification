@@ -5,10 +5,10 @@ required:
   - progress
 properties:
   user_id:
-    type: string
+    type: integer
     format: "User ID. Acts as the partition key."
   episode_id:
-    type: string
+    type: integer
     format: "Episode ID. Acts as the sort key."
   progress:
     type: integer

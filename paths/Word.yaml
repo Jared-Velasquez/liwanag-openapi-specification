@@ -6,7 +6,7 @@ get:
       in: path
       required: true
       schema:
-        type: string
+        type: integer
   responses:
     "200":
       description: "Return vocabulary word fields as defined by schema."
@@ -14,6 +14,10 @@ get:
         application/json:
           schema:
             $ref: "#/components/schemas/Word"
+    401:
+      description: "User is not authenticated."
+    404:
+      description: "No Word found corresponding to `word_id`."
 delete:
   summary: "Delete the vocabulary word corresponding to word_id."
   operationId: "deleteVocabulary"
@@ -22,7 +26,13 @@ delete:
       in: path
       required: true
       schema:
-        type: string
+        type: integer
   responses:
     "204":
       description: "Vocabulary word with word_id {word_id} was deleted successfully."
+    401:
+      description: "User is not authenticated."
+    403:
+      description: "User is not authorized. User must be an Admin."
+    404:
+      description: "No Word found corresponding to `word_id`."

@@ -10,6 +10,8 @@ get:
             type: array
             items:
               $ref: "#/components/schemas/Word"
+    401:
+      description: "User is not authenticated."
 post:
   summary: "Add a new vocabulary word."
   operationId: "addVocabulary"
@@ -22,3 +24,7 @@ post:
   responses:
     "201":
       description: "Vocabulary word added successfully."
+    401:
+      description: "User is not authenticated."
+    403:
+      description: "User is not authorized. User must be an Admin."
